@@ -27,6 +27,5 @@ public class Main {
         Ask.add(panel);
         textField.setSize(100,100);
         panel.add(textField);
-        int test=0;
     }
 }
