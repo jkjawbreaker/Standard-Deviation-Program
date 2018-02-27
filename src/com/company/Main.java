@@ -25,7 +25,7 @@ public class Main {
                 System.out.println(enterInt);
             }else if (s1.nextLine()=="done"){
                 for(int a=0;a<counter;a++){
-                    System.out.print(numbers);
+                    System.out.print(numbers[counter]);
                 }
             }
             else {
