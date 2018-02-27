@@ -16,20 +16,24 @@ public class Main {
         String fileName;
         System.out.println("What would you like to name the file your numbers are stored in");
         Scanner s1 = new Scanner(System.in), s2 = new Scanner(System.in);
+        fileName=s1.nextLine();
+        System.out.println("Enter number");
         do {
-            s1 = new Scanner(System.in);
-            if(s1.hasNextInt()){
-                enterInt=s1.nextInt();
+            s2 = new Scanner(System.in);
+            if(s2.hasNextInt()){
+                enterInt=s2.nextInt();
                 maxarray=maxarray+1;
                 numbers[counter]=enterInt;
                 System.out.println(enterInt);
-            }else if (s1.nextLine()=="done"){
+                System.out.println("Enter number");
+            }else if (s2.nextLine()=="done"){
                 for(int a=0;a<counter;a++){
                     System.out.print(numbers[counter]);
                 }
             }
             else {
-                System.out.println(counter);
+                System.out.println("You must enter a number");
+                System.out.println("Enter number");
             }
             counter=counter+1;
         }while (repeat) ;
