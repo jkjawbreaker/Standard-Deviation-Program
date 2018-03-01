@@ -37,5 +37,6 @@ public class Main {
             }
             counter=counter+1;
         }while (repeat) ;
+        String test;
     }
 }
