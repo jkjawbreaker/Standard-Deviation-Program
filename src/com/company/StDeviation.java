@@ -24,14 +24,17 @@ public class StDeviation {
     //         private int[] Data = new int[ProjConstants.MAXDATA];
     //
     private int[] Data = new int[MAXDATA];
-
+    int position =0,amount=0;
     // ---------*---------*---------*---------*---------*---------*---------*---------*
     // The following method will take a new data item and add it into the 1 Dimensional
     // Array of data values to be used later.
     //
     // You MUST write this method and I will use it during testing
     //
-    public void addNewDataItem(double dataItem){
+    public void addNewDataItem(int dataItem){
+
+        Data[position]= dataItem;
+        position=position+1;
 
     }
 
@@ -41,7 +44,7 @@ public class StDeviation {
     // You MUST write this method and I will use it during testing
     //
     public int getNumberOfDataItems(){
-
+        amount= amount;
         // temporary value
         return INVALID;
     }
