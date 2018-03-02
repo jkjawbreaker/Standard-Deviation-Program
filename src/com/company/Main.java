@@ -12,7 +12,7 @@ public class Main {
     public static void main(String[] args) {
         boolean repeat = true;
         int enterInt,counter=0,maxarray=1;
-        int numbers[]=new int[maxarray];
+        int numbers[];
         String fileName;
         System.out.println("What would you like to name the file your numbers are stored in");
         Scanner s1 = new Scanner(System.in), s2 = new Scanner(System.in);
@@ -20,9 +20,11 @@ public class Main {
         System.out.println("Enter number");
         do {
             s2 = new Scanner(System.in);
+            numbers=new int[maxarray];
             if(s2.hasNextInt()){
                 enterInt=s2.nextInt();
                 maxarray=maxarray+1;
+
                 numbers[counter]=enterInt;
                 System.out.println(enterInt);
                 System.out.println("Enter number");
@@ -34,8 +36,11 @@ public class Main {
             else {
                 System.out.println("You must enter a number");
                 System.out.println("Enter number");
+                for (int a=0;a<counter;a++) {
+                    System.out.print(numbers[counter]);
+                }
             }
             counter=counter+1;
-        }while (repeat) ;
+        }while (repeat);
     }
 }
