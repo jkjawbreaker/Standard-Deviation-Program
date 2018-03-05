@@ -95,3 +95,18 @@ public class StDeviation {
     }
 
 }
+package com.company;
+
+public class Main {
+
+    public static void main(String[] args) {
+        // write your code here
+        int[] a = {1,2,3,4,5};
+        double amount = a.length;
+        double sum=0;
+        for(int i=0;i<amount;i++){
+            sum = sum+a[i];
+        }
+        System.out.print(sum);
+    }
+}
