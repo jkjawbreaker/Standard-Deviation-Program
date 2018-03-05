@@ -4,6 +4,8 @@ package com.company;
 // The use of static imports is something that should be used carefully.
 // I have only ever used this technique for the project wide constants.
 //
+import jdk.management.resource.internal.inst.DatagramDispatcherRMHooks;
+
 import static com.company.ProjConstants.*;
 
 /**
@@ -23,7 +25,8 @@ public class StDeviation {
     //
     //         private int[] Data = new int[ProjConstants.MAXDATA];
     //
-    private int[] Data = new int[MAXDATA];
+    //private int[] Data = new int[MAXDATA];
+    private int[] Data = {1,2,3,4,5};
     int position =0,amount=0;
     // ---------*---------*---------*---------*---------*---------*---------*---------*
     // The following method will take a new data item and add it into the 1 Dimensional
@@ -44,9 +47,9 @@ public class StDeviation {
     // You MUST write this method and I will use it during testing
     //
     public int getNumberOfDataItems(){
-        amount= amount;
         // temporary value
-        return INVALID;
+        amount =Data.length;
+        return amount;
     }
 
     // ---------*---------*---------*---------*---------*---------*---------*---------*
@@ -56,9 +59,14 @@ public class StDeviation {
     // You MUST write this method and I will use it during testing
     //
     public double calcAverage(){
+        double sum=0;
+        for(int a=0;a<amount;a++){
 
-        // temporary value
-        return INVALID;
+            sum=sum+Data[a];
+
+        }
+        double average= sum/amount;
+        return sum;
     }
 
     // ---------*---------*---------*---------*---------*---------*---------*---------*

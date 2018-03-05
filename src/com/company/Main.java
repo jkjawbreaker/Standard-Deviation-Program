@@ -10,7 +10,7 @@ import static com.company.ProjConstants.*;
 
 public class Main {
     public static void main(String[] args) {
-        double
-
+        StDeviation calcSDev =  new StDeviation();
+        System.out.println(calcSDev.calcAverage());
     }
 }
